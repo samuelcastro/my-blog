@@ -84,10 +84,10 @@ async function Footer() {
                 Linkeen
               </a>
               <a
-                href="https://github.com/vercel/next.js/tree/canary/examples/cms-sanity"
+                href="https://www.linkedin.com/in/samuelcasilva/"
                 className="mx-3 font-bold hover:underline"
               >
-                View on GitHub
+                LinkedIn
               </a>
             </div>
           </div>
