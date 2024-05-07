@@ -13,6 +13,7 @@
     "typegen": "sanity schema extract && sanity typegen generate"
   },
   "dependencies": {
+    "@portabletext/react": "^3.0.18",
     "@sanity/assist": "3.0.3",
     "@sanity/code-input": "^4.1.4",
     "@sanity/icons": "2.11.8",
@@ -31,6 +32,7 @@
     "postcss": "^8.4.38",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-syntax-highlighter": "^15.5.0",
     "rxjs": "^7.8.1",
     "sanity": "3.39.0",
     "sanity-plugin-asset-source-unsplash": "3.0.1",
@@ -41,6 +43,7 @@
   },
   "devDependencies": {
     "@next/env": "latest",
+    "@types/react-syntax-highlighter": "^15.5.13",
     "eslint": "^8.57.0",
     "eslint-config-next": "latest"
   }
