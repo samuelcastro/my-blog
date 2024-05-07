@@ -12,7 +12,8 @@ import {
   PortableText,
   type PortableTextComponents,
   type PortableTextBlock,
-} from "next-sanity";
+} from "@portabletext/react";
+import CodeBlock from "./CodeBlock";
 
 export default function CustomPortableText({
   className,
@@ -22,6 +23,9 @@ export default function CustomPortableText({
   value: PortableTextBlock[];
 }) {
   const components: PortableTextComponents = {
+    types: {
+      code: CodeBlock,
+    },
     block: {
       h5: ({ children }) => (
         <h5 className="mb-2 text-sm font-semibold">{children}</h5>
