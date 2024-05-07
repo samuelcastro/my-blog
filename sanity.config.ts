@@ -7,6 +7,7 @@ import { PluginOptions, defineConfig } from "sanity";
 import { unsplashImageAsset } from "sanity-plugin-asset-source-unsplash";
 import { presentationTool } from "sanity/presentation";
 import { structureTool } from "sanity/structure";
+import { codeInput } from "@sanity/code-input";
 
 import { apiVersion, dataset, projectId, studioUrl } from "@/sanity/lib/api";
 import { locate } from "@/sanity/plugins/locate";
@@ -42,6 +43,8 @@ export default defineConfig({
     // Sets up AI Assist with preset prompts
     // https://www.sanity.io/docs/ai-assist
     assistWithPresets(),
+    // https://www.sanity.io/docs/portable-text-editor-configuration#8d1dbe8a8b56
+    codeInput(),
     // Vision lets you query your content with GROQ in the studio
     // https://www.sanity.io/docs/the-vision-plugin
     process.env.NODE_ENV === "development" &&
