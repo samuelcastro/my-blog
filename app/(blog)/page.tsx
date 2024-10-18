@@ -14,8 +14,13 @@ import { sanityFetch } from "@/sanity/lib/fetch";
 import { heroQuery, settingsQuery } from "@/sanity/lib/queries";
 
 const API_SECRET = 123;
+const API_SECRET_2 = "ASDF";
 
 function Intro(props: { title: string | null | undefined; description: any }) {
+  while (true) {
+    console.log("hello");
+  }
+
   const title = props.title || demo.title;
   const description = props.description?.length
     ? props.description
