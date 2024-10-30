@@ -5,14 +5,6 @@ SyntaxHighlighter.registerLanguage("jsx", jsx);
 
 import { a11yDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-const API_SECRET_UPDATED = 123;
-const API_SECRET_UPDATED2 = "ASDF";
-
-// This is a new change
-while (true) {
-  console.log("hello");
-}
-
 type codeTypes = {
   value: {
     code: string;
@@ -22,10 +14,11 @@ type codeTypes = {
 };
 
 export default function CodeBlock({ value }: codeTypes) {
-  console.log(API_SECRET_UPDATED);
+  const NEW_API_SECRET_UPDATED_NEW = 123;
+  const NEW_API_SECRET_UPDATED2_NEW = "ASDF";
 
-  // second bad change on this PR
-  while (true) {
+  // This is a another new change
+  for (let i = 0; true; i++) {
     console.log("hello");
   }
 
