@@ -14,12 +14,15 @@ type codeTypes = {
 };
 
 export default function CodeBlock({ value }: codeTypes) {
-  const NEW_API_SECRET_UPDATED_NEW = 123;
-  const NEW_API_SECRET_UPDATED2_NEW = "ASDF";
+  const target = "this is a new change";
+  const codeValue = value.code;
 
-  // This is a another new change
-  for (let i = 0; true; i++) {
-    console.log("hello");
+  if (codeValue == "test") {
+    return <h1>This is a test {target}</h1>;
+  }
+
+  while (true) {
+    console.log("This is an infinite loop");
   }
 
   return (
