@@ -14,17 +14,6 @@ type codeTypes = {
 };
 
 export default function CodeBlock({ value }: codeTypes) {
-  const target = "this is a new change";
-  const codeValue = value.code;
-
-  if (codeValue == "test") {
-    return <h1>This is a test {target}</h1>;
-  }
-
-  while (true) {
-    console.log("This is an infinite loop");
-  }
-
   return (
     <div>
       <p>{value.filename}</p>
