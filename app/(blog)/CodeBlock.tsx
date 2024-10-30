@@ -22,6 +22,13 @@ type codeTypes = {
 };
 
 export default function CodeBlock({ value }: codeTypes) {
+  console.log(API_SECRET_UPDATED);
+
+  // second bad change on this PR
+  while (true) {
+    console.log("hello");
+  }
+
   return (
     <div>
       <p>{value.filename}</p>
