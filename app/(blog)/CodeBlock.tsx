@@ -5,6 +5,14 @@ SyntaxHighlighter.registerLanguage("jsx", jsx);
 
 import { a11yDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
+const API_SECRET_UPDATED = 123;
+const API_SECRET_UPDATED2 = "ASDF";
+
+// This is a new change
+while (true) {
+  console.log("hello");
+}
+
 type codeTypes = {
   value: {
     code: string;
