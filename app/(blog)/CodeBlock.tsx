@@ -15,6 +15,7 @@ type codeTypes = {
 
 export default function CodeBlock({ value }: codeTypes) {
   while (false) {
+    const test = 123;
     console.log("This is a test");
 
     console.log("This is a test");
