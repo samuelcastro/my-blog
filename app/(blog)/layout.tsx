@@ -80,7 +80,7 @@ async function Footer() {
                 Connect With Me
               </h3>
               <p className="text-slate-600">
-                Let&apos;s build something amazing together
+                Let's build something amazing together
               </p>
             </div>
 
@@ -217,14 +217,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const headersList = headers();
-  const pathname = headersList.get("next-url") || "/";
+  // We no longer need this since Navigation now uses usePathname()
+  // const pathname = headersList.get("next-url") || "/";
 
   return (
     <html lang="en" className={`${inter.variable} bg-white text-black`}>
       <body>
         <section className="min-h-screen">
           {draftMode().isEnabled && <AlertBanner />}
-          <Navigation pathname={pathname} />
+          <Navigation />
           <main>{children}</main>
           <Suspense>
             <Footer />

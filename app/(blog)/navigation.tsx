@@ -1,6 +1,11 @@
-import Link from "next/link";
+"use client";
 
-export default function Navigation({ pathname }: { pathname: string }) {
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+export default function Navigation() {
+  const pathname = usePathname();
+
   return (
     <nav className="border-b border-slate-100 py-4">
       <div className="container mx-auto flex items-center justify-between px-5">
@@ -13,13 +18,16 @@ export default function Navigation({ pathname }: { pathname: string }) {
 
         <div className="flex items-center">
           <div className="flex space-x-6 mr-6">
-            <NavLink href="/" isActive={pathname === "/"}>
+            <NavLink href="/" isActive={pathname === "/" || pathname === ""}>
               Home
             </NavLink>
-            <NavLink href="/experience" isActive={pathname === "/experience"}>
+            <NavLink
+              href="/experience"
+              isActive={pathname.includes("/experience")}
+            >
               Experience
             </NavLink>
-            <NavLink href="/about" isActive={pathname === "/about"}>
+            <NavLink href="/about" isActive={pathname.includes("/about")}>
               About Me
             </NavLink>
           </div>
