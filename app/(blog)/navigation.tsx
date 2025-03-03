@@ -50,11 +50,16 @@ function NavLink({
   return (
     <Link
       href={href}
-      className={`font-medium transition-colors duration-300 ${
-        isActive ? "text-blue-600" : "text-slate-700 hover:text-blue-600"
+      className={`relative font-medium transition-colors duration-300 ${
+        isActive
+          ? "text-blue-600 font-semibold"
+          : "text-slate-700 hover:text-blue-600"
       }`}
     >
       {children}
+      {isActive && (
+        <span className="absolute -bottom-1.5 left-0 h-0.5 w-full bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"></span>
+      )}
     </Link>
   );
 }
