@@ -8,7 +8,7 @@ export default function Navigation({ pathname }: { pathname: string }) {
           href="/"
           className="text-xl font-bold text-slate-900 hover:text-blue-600 transition-colors duration-300"
         >
-          Sam Silva
+          My Blog
         </Link>
 
         <div className="flex items-center">
@@ -18,6 +18,9 @@ export default function Navigation({ pathname }: { pathname: string }) {
             </NavLink>
             <NavLink href="/experience" isActive={pathname === "/experience"}>
               Experience
+            </NavLink>
+            <NavLink href="/about" isActive={pathname === "/about"}>
+              About Me
             </NavLink>
           </div>
 
