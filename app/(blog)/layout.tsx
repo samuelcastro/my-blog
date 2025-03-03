@@ -80,7 +80,7 @@ async function Footer() {
                 Connect With Me
               </h3>
               <p className="text-slate-600">
-                Let's build something amazing together
+                Let&apos;s build something amazing together
               </p>
             </div>
 
