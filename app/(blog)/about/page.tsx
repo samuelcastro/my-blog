@@ -23,11 +23,14 @@ export default function AboutPage() {
         <div className="mb-16 grid gap-10 md:grid-cols-12">
           <div className="md:col-span-4 flex flex-col items-center">
             <div className="relative mb-6 h-64 w-64 overflow-hidden rounded-full border-4 border-white shadow-lg">
-              {/* Replace with your actual image */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 opacity-90"></div>
-              <div className="absolute inset-0 flex items-center justify-center text-4xl font-bold text-white">
-                SS
-              </div>
+              <Image
+                src="/profile.png"
+                alt="Samuel Silva"
+                fill
+                sizes="(max-width: 768px) 100vw, 256px"
+                className="object-cover"
+                priority
+              />
             </div>
 
             <div className="flex flex-wrap justify-center gap-3">
@@ -80,7 +83,7 @@ export default function AboutPage() {
                 href="https://www.instagram.com/samuelcasilva"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 text-white transition-transform hover:scale-110"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-tr from-blue-400 to-purple-600 text-white transition-transform hover:scale-110"
                 aria-label="Instagram"
               >
                 <svg
@@ -157,7 +160,7 @@ export default function AboutPage() {
             {/* Timeline Items */}
             <div className="space-y-16">
               {/* Item 1 */}
-              <div className="relative">
+              <div className="relative pt-10">
                 <div className="absolute left-1/2 top-0 flex h-8 w-8 -translate-x-1/2 transform items-center justify-center rounded-full bg-blue-600 text-white">
                   <svg
                     className="h-4 w-4"
@@ -197,7 +200,7 @@ export default function AboutPage() {
               </div>
 
               {/* Item 2 */}
-              <div className="relative">
+              <div className="relative pt-10">
                 <div className="absolute left-1/2 top-0 flex h-8 w-8 -translate-x-1/2 transform items-center justify-center rounded-full bg-blue-600 text-white">
                   <svg
                     className="h-4 w-4"
@@ -236,7 +239,7 @@ export default function AboutPage() {
               </div>
 
               {/* Item 3 */}
-              <div className="relative">
+              <div className="relative pt-10">
                 <div className="absolute left-1/2 top-0 flex h-8 w-8 -translate-x-1/2 transform items-center justify-center rounded-full bg-blue-600 text-white">
                   <svg
                     className="h-4 w-4"
@@ -274,7 +277,7 @@ export default function AboutPage() {
               </div>
 
               {/* Item 4 */}
-              <div className="relative">
+              <div className="relative pt-10">
                 <div className="absolute left-1/2 top-0 flex h-8 w-8 -translate-x-1/2 transform items-center justify-center rounded-full bg-blue-600 text-white">
                   <svg
                     className="h-4 w-4"
@@ -313,7 +316,7 @@ export default function AboutPage() {
               </div>
 
               {/* Item 5 */}
-              <div className="relative">
+              <div className="relative pt-10">
                 <div className="absolute left-1/2 top-0 flex h-8 w-8 -translate-x-1/2 transform items-center justify-center rounded-full bg-blue-600 text-white">
                   <svg
                     className="h-4 w-4"
@@ -403,7 +406,7 @@ export default function AboutPage() {
 
             {/* Project 2 */}
             <div className="group overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-300 hover:shadow-xl">
-              <div className="relative h-48 bg-gradient-to-r from-green-500 to-teal-600">
+              <div className="relative h-48 bg-gradient-to-r from-blue-400 to-purple-500">
                 <div className="absolute inset-0 flex items-center justify-center text-3xl font-bold text-white">
                   Linkeen
                 </div>
@@ -444,7 +447,7 @@ export default function AboutPage() {
 
             {/* Project 3 */}
             <div className="group overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-300 hover:shadow-xl">
-              <div className="relative h-48 bg-gradient-to-r from-yellow-500 to-orange-600">
+              <div className="relative h-48 bg-gradient-to-r from-blue-300 to-purple-400">
                 <div className="absolute inset-0 flex items-center justify-center text-3xl font-bold text-white">
                   Education Platform
                 </div>
