@@ -10,8 +10,10 @@ import {
 import { Inter } from "next/font/google";
 import { draftMode } from "next/headers";
 import { Suspense } from "react";
+import { headers } from "next/headers";
 
 import AlertBanner from "./alert-banner";
+import Navigation from "./navigation";
 import PortableText from "./portable-text";
 
 import type { SettingsQueryResult } from "@/sanity.types";
@@ -102,11 +104,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const headersList = headers();
+  const pathname = headersList.get("next-url") || "/";
+
   return (
     <html lang="en" className={`${inter.variable} bg-white text-black`}>
       <body>
         <section className="min-h-screen">
           {draftMode().isEnabled && <AlertBanner />}
+          <Navigation pathname={pathname} />
           <main>{children}</main>
           <Suspense>
             <Footer />
