@@ -3,31 +3,31 @@ import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <div className="container mx-auto px-5 py-10">
-      <section className="mb-20">
+    <div className="container mx-auto px-4 sm:px-5 py-8 sm:py-10">
+      <section className="mb-16 sm:mb-20">
         {/* Hero Section */}
-        <div className="mb-16 text-center">
-          <h1 className="relative mb-6 text-5xl font-bold text-slate-900">
+        <div className="mb-12 sm:mb-16 text-center">
+          <h1 className="relative mb-4 sm:mb-6 text-4xl sm:text-5xl font-bold text-slate-900">
             <span className="relative">
               About Me
-              <div className="absolute -bottom-3 left-0 h-1.5 w-full rounded-full bg-gradient-to-r from-blue-400 to-purple-400"></div>
+              <div className="absolute -bottom-2 sm:-bottom-3 left-0 h-1 sm:h-1.5 w-full rounded-full bg-gradient-to-r from-blue-500 to-purple-600"></div>
             </span>
           </h1>
-          <p className="mx-auto max-w-3xl text-xl text-slate-700">
+          <p className="mx-auto max-w-3xl text-lg sm:text-xl text-slate-700">
             Software engineer, entrepreneur, and technology leader with a
             passion for innovation
           </p>
         </div>
 
         {/* Profile Section */}
-        <div className="mb-16 grid gap-10 md:grid-cols-12">
+        <div className="mb-12 sm:mb-16 grid gap-8 sm:gap-10 md:grid-cols-12">
           <div className="md:col-span-4 flex flex-col items-center">
-            <div className="relative mb-6 h-64 w-64 overflow-hidden rounded-full border-4 border-white shadow-lg">
+            <div className="relative mb-6 h-48 w-48 sm:h-64 sm:w-64 overflow-hidden rounded-full border-4 border-white shadow-lg">
               <Image
                 src="/profile.png"
                 alt="Samuel Silva"
                 fill
-                sizes="(max-width: 768px) 100vw, 256px"
+                sizes="(max-width: 640px) 192px, (max-width: 768px) 256px, 256px"
                 className="object-cover"
                 priority
               />
@@ -83,7 +83,7 @@ export default function AboutPage() {
                 href="https://www.instagram.com/samuelcasilva"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-tr from-blue-400 to-purple-600 text-white transition-transform hover:scale-110"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-tr from-blue-500 to-purple-600 text-white transition-transform hover:scale-110"
                 aria-label="Instagram"
               >
                 <svg
@@ -113,8 +113,10 @@ export default function AboutPage() {
           </div>
 
           <div className="md:col-span-8">
-            <h2 className="mb-6 text-3xl font-bold text-slate-900">My Story</h2>
-            <div className="space-y-4 text-lg text-slate-700">
+            <h2 className="mb-4 sm:mb-6 text-2xl sm:text-3xl font-bold text-slate-900 text-center md:text-left">
+              My Story
+            </h2>
+            <div className="space-y-4 text-base sm:text-lg text-slate-700">
               <p>
                 With over 15+ years of experience as a software engineer and
                 technology leader, my career has been defined by a deep passion
@@ -148,8 +150,8 @@ export default function AboutPage() {
         </div>
 
         {/* Journey Timeline */}
-        <div className="mb-16">
-          <h2 className="mb-10 text-center text-3xl font-bold text-slate-900">
+        <div className="mb-12 sm:mb-16">
+          <h2 className="mb-8 sm:mb-10 text-center text-2xl sm:text-3xl font-bold text-slate-900">
             My Journey
           </h2>
 
@@ -158,7 +160,7 @@ export default function AboutPage() {
             <div className="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 transform bg-slate-200"></div>
 
             {/* Timeline Items */}
-            <div className="space-y-16">
+            <div className="space-y-12 sm:space-y-16">
               {/* Item 1 */}
               <div className="relative pt-10">
                 <div className="absolute left-1/2 top-0 flex h-8 w-8 -translate-x-1/2 transform items-center justify-center rounded-full bg-blue-600 text-white">
@@ -178,12 +180,12 @@ export default function AboutPage() {
                   </svg>
                 </div>
 
-                <div className="ml-auto mr-auto grid w-full max-w-5xl grid-cols-1 gap-8 md:grid-cols-2">
-                  <div className="ml-auto text-right md:ml-0">
+                <div className="ml-auto mr-auto grid w-full max-w-5xl grid-cols-1 gap-4 sm:gap-8 md:grid-cols-2">
+                  <div className="ml-auto text-center md:text-right md:ml-0">
                     <div className="inline-block rounded-lg bg-blue-50 px-4 py-2 text-sm font-medium text-blue-600">
                       2024
                     </div>
-                    <h3 className="mt-2 text-xl font-bold text-slate-900">
+                    <h3 className="mt-2 text-lg sm:text-xl font-bold text-slate-900">
                       Founded Linkeen
                     </h3>
                   </div>
@@ -218,12 +220,12 @@ export default function AboutPage() {
                   </svg>
                 </div>
 
-                <div className="ml-auto mr-auto grid w-full max-w-5xl grid-cols-1 gap-8 md:grid-cols-2">
-                  <div className="ml-auto text-right md:ml-0">
+                <div className="ml-auto mr-auto grid w-full max-w-5xl grid-cols-1 gap-4 sm:gap-8 md:grid-cols-2">
+                  <div className="ml-auto text-center md:text-right md:ml-0">
                     <div className="inline-block rounded-lg bg-blue-50 px-4 py-2 text-sm font-medium text-blue-600">
                       2024
                     </div>
-                    <h3 className="mt-2 text-xl font-bold text-slate-900">
+                    <h3 className="mt-2 text-lg sm:text-xl font-bold text-slate-900">
                       Developed Evolua.io
                     </h3>
                   </div>
@@ -257,12 +259,12 @@ export default function AboutPage() {
                   </svg>
                 </div>
 
-                <div className="ml-auto mr-auto grid w-full max-w-5xl grid-cols-1 gap-8 md:grid-cols-2">
-                  <div className="ml-auto text-right md:ml-0">
+                <div className="ml-auto mr-auto grid w-full max-w-5xl grid-cols-1 gap-4 sm:gap-8 md:grid-cols-2">
+                  <div className="ml-auto text-center md:text-right md:ml-0">
                     <div className="inline-block rounded-lg bg-blue-50 px-4 py-2 text-sm font-medium text-blue-600">
                       2021
                     </div>
-                    <h3 className="mt-2 text-xl font-bold text-slate-900">
+                    <h3 className="mt-2 text-lg sm:text-xl font-bold text-slate-900">
                       Moved to the USA
                     </h3>
                   </div>
@@ -295,12 +297,12 @@ export default function AboutPage() {
                   </svg>
                 </div>
 
-                <div className="ml-auto mr-auto grid w-full max-w-5xl grid-cols-1 gap-8 md:grid-cols-2">
-                  <div className="ml-auto text-right md:ml-0">
+                <div className="ml-auto mr-auto grid w-full max-w-5xl grid-cols-1 gap-4 sm:gap-8 md:grid-cols-2">
+                  <div className="ml-auto text-center md:text-right md:ml-0">
                     <div className="inline-block rounded-lg bg-blue-50 px-4 py-2 text-sm font-medium text-blue-600">
                       2019
                     </div>
-                    <h3 className="mt-2 text-xl font-bold text-slate-900">
+                    <h3 className="mt-2 text-lg sm:text-xl font-bold text-slate-900">
                       Created Booking Platform
                     </h3>
                   </div>
@@ -334,12 +336,12 @@ export default function AboutPage() {
                   </svg>
                 </div>
 
-                <div className="ml-auto mr-auto grid w-full max-w-5xl grid-cols-1 gap-8 md:grid-cols-2">
-                  <div className="ml-auto text-right md:ml-0">
+                <div className="ml-auto mr-auto grid w-full max-w-5xl grid-cols-1 gap-4 sm:gap-8 md:grid-cols-2">
+                  <div className="ml-auto text-center md:text-right md:ml-0">
                     <div className="inline-block rounded-lg bg-blue-50 px-4 py-2 text-sm font-medium text-blue-600">
                       2016
                     </div>
-                    <h3 className="mt-2 text-xl font-bold text-slate-900">
+                    <h3 className="mt-2 text-lg sm:text-xl font-bold text-slate-900">
                       Moved to Canada
                     </h3>
                   </div>
@@ -358,24 +360,22 @@ export default function AboutPage() {
         </div>
 
         {/* Projects Section */}
-        <div className="mb-16">
-          <h2 className="mb-10 text-center text-3xl font-bold text-slate-900">
+        <div className="mb-12 sm:mb-16">
+          <h2 className="mb-8 sm:mb-10 text-center text-2xl sm:text-3xl font-bold text-slate-900">
             Featured Projects
           </h2>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {/* Project 1 */}
             <div className="group overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-300 hover:shadow-xl">
-              <div className="relative h-48 bg-gradient-to-r from-blue-500 to-purple-600">
-                <div className="absolute inset-0 flex items-center justify-center text-3xl font-bold text-white">
-                  Evolua.io
-                </div>
+              <div className="relative h-48 bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
+                <div className="text-3xl font-bold text-white">Evolua.io</div>
               </div>
-              <div className="p-6">
-                <h3 className="mb-2 text-xl font-bold text-slate-900">
+              <div className="p-4 sm:p-6">
+                <h3 className="mb-2 text-lg sm:text-xl font-bold text-slate-900">
                   AI Code Review Platform
                 </h3>
-                <p className="mb-4 text-slate-700">
+                <p className="mb-4 text-sm sm:text-base text-slate-700">
                   An AI-powered platform that helps teams improve code quality
                   and security through automated reviews and suggestions.
                 </p>
@@ -406,16 +406,14 @@ export default function AboutPage() {
 
             {/* Project 2 */}
             <div className="group overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-300 hover:shadow-xl">
-              <div className="relative h-48 bg-gradient-to-r from-blue-400 to-purple-500">
-                <div className="absolute inset-0 flex items-center justify-center text-3xl font-bold text-white">
-                  Linkeen
-                </div>
+              <div className="relative h-48 bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
+                <div className="text-3xl font-bold text-white">Linkeen</div>
               </div>
-              <div className="p-6">
-                <h3 className="mb-2 text-xl font-bold text-slate-900">
+              <div className="p-4 sm:p-6">
+                <h3 className="mb-2 text-lg sm:text-xl font-bold text-slate-900">
                   IT Staff Augmentation
                 </h3>
-                <p className="mb-4 text-slate-700">
+                <p className="mb-4 text-sm sm:text-base text-slate-700">
                   Connecting talented engineers with companies in North America,
                   providing staffing solutions for web, cloud, and AI
                   development.
@@ -447,16 +445,16 @@ export default function AboutPage() {
 
             {/* Project 3 */}
             <div className="group overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-300 hover:shadow-xl">
-              <div className="relative h-48 bg-gradient-to-r from-blue-300 to-purple-400">
-                <div className="absolute inset-0 flex items-center justify-center text-3xl font-bold text-white">
+              <div className="relative h-48 bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
+                <div className="text-3xl font-bold text-white">
                   Education Platform
                 </div>
               </div>
-              <div className="p-6">
-                <h3 className="mb-2 text-xl font-bold text-slate-900">
+              <div className="p-4 sm:p-6">
+                <h3 className="mb-2 text-lg sm:text-xl font-bold text-slate-900">
                   International Education Booking
                 </h3>
-                <p className="mb-4 text-slate-700">
+                <p className="mb-4 text-sm sm:text-base text-slate-700">
                   A platform connecting students with educational institutions
                   worldwide, streamlining the booking and enrollment process.
                 </p>
@@ -469,24 +467,26 @@ export default function AboutPage() {
         </div>
 
         {/* Call to Action */}
-        <div className="rounded-2xl bg-gradient-to-r from-blue-500 to-purple-600 p-8 text-center text-white md:p-12">
-          <h2 className="mb-4 text-3xl font-bold">Let&apos;s Connect</h2>
-          <p className="mx-auto mb-8 max-w-2xl text-lg">
+        <div className="rounded-2xl bg-gradient-to-r from-blue-500 to-purple-600 p-6 sm:p-8 text-center md:p-12">
+          <h2 className="mb-3 sm:mb-4 text-2xl sm:text-3xl font-bold text-white">
+            Let&apos;s Connect
+          </h2>
+          <p className="mx-auto mb-6 sm:mb-8 max-w-2xl text-base sm:text-lg text-white">
             I&apos;m always open to discussing new projects, creative ideas, or
             opportunities to be part of your vision.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4">
             <a
               href="https://calendly.com/samsilvas"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-white px-6 py-3 font-medium text-blue-600 transition-colors hover:bg-blue-50"
+              className="rounded-full bg-white px-6 py-3 font-medium text-blue-600 transition-colors hover:bg-blue-50 w-full sm:w-auto"
             >
               Book a Call
             </a>
             <a
               href="mailto:samuelcastrosilva@gmail.com"
-              className="rounded-full border-2 border-white px-6 py-3 font-medium text-white transition-colors hover:bg-white/10"
+              className="rounded-full border-2 border-white px-6 py-3 font-medium text-white transition-colors hover:bg-white/10 w-full sm:w-auto"
             >
               Send an Email
             </a>
