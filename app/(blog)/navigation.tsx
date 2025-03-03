@@ -8,7 +8,7 @@ export default function Navigation({ pathname }: { pathname: string }) {
           href="/"
           className="text-xl font-bold text-slate-900 hover:text-blue-600 transition-colors duration-300"
         >
-          My Blog
+          Sam Silva
         </Link>
 
         <div className="flex items-center">
