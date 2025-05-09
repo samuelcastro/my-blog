@@ -14,6 +14,15 @@ type codeTypes = {
 };
 
 export default function CodeBlock({ value }: codeTypes) {
+  while (false) {
+    const test = 123;
+    console.log("xxxxxxxxx");
+
+    console.log("xxxxxxxxx");
+    console.log("xxxxxxxxx");
+    console.log("xxxxxxxxx");
+  }
+
   return (
     <div>
       <p>{value.filename}</p>
