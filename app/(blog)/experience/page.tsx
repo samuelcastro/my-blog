@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 
 function ExperienceSection() {
   const [showAllExperiences, setShowAllExperiences] = useState(false);
@@ -9,55 +8,53 @@ function ExperienceSection() {
   // Initial experiences (most recent 3)
   const initialExperiences = [
     {
-      title: "Sr. Software Engineer (AI)",
-      company: "Linkeen, LLC",
-      period: "April 2024 - Present",
+      title: "Founding Engineer",
+      company: "Stealth AI Startup · Palo Alto, CA (On-site)",
+      period: "July 2025 - Present",
       achievements: [
-        "Developed from scratch an AI code review platform that reduced code review time by 40% while improving security and code quality. (Evolua.io)",
-        "Developed both frontend (Next.js) and backend web applications using Node.js, Typescript and AWS Bedrock as main AI platform.",
-        "Developed full stack applications for leveraging the power of serverless architecture using AWS Lambdas, AppSync, Graphql, EventBridge and DynamoDB using Next.js in the frontend that supports millions of requests per seconds.",
-        "Developed custom RAG solutions using vector databases like Pinecone and Supabase PostgreSQL/pgvector.",
-        "Developed AI agents using Langchain/LangGraph/Python with Pinecone for similarity search.",
-        "Developed a Next.js application for the international education industry that connected 10k schools worldwide.",
+        "Building the core platform for a new AI-native product alongside the founding team.",
+        "Leading architecture decisions across agent workflows, data infrastructure, and deployment."
       ],
     },
     {
-      title: "Staff Software Engineer",
-      company: "Snap One, LLC",
-      period: "January 2021 - April 2024",
+      title: "Founder & CEO",
+      company: "Evolua · San Francisco Bay Area (On-site)",
+      period: "December 2024 - Present",
       achievements: [
-        "Developed and maintained web application solutions for home automation (IoT) and device management that helped thousands of homeowners manage their devices.",
-        "Implemented an entire React and Node.js application using JavaScript/Typescript as the company hospitality solution.",
-        "Architected cloud infrastructure solutions based on AWS (Amazon Web Services).",
-        "Developed new APIs using Nest.js, PostgreSQL, and the TypeORM framework.",
-        "Developed solutions based on the JAMstack (Next.js, Gatsby).",
-        "Developed unit and integration tests for code quality.",
-        "Developed workflows and strategies to improve the team's productivity.",
-        "Mentored and guided other engineers.",
+        "Building Evolua, an AI-driven code review platform that helps teams ship faster and safer.",
+        "Driving product strategy, customer development, and go-to-market for enterprise engineering teams.",
+        "Designing developer workflows that blend AI assistance, security guardrails, and scalable infrastructure.",
       ],
     },
     {
-      title: "Senior Software Engineer",
-      company: "Control4 Corporation",
-      period: "January 2019 - December 2020",
+      title: "AI Founding Engineer",
+      company: "AGI Inc. · San Francisco Bay Area (On-site)",
+      period: "January 2025 - July 2025",
       achievements: [
-        "Architected and developed web software solutions for residential/home automation.",
-        "Developed APIs using Nest.js and the TypeORM framework.",
-        "Developed IoT solutions for the hospitality industry using Node.js, JavaScript, and Typescript.",
-        "Integrated payment support using Stripe.js.",
-        "Implemented web applications using the JAMstack (Next.js, Gatsby).",
-        "Implemented and maintained web applications using React.js.",
-        "Mentored engineers on best practices in software development.",
-        "Led the team of software engineers defining best practices and reviewing work.",
-        "Defined best practices in software development based on JavaScript and React.js.",
-        "Developed CI/CD workflows using GitHub Actions and AWS (Amazon Web Services).",
-        "Developed reusable libraries to be used by different teams using JavaScript, Node.js, and React.js.",
+        "Prototyped applied AI experiences that reimagined human-AI interaction for everyday workflows.",
+        "Shipped agentic pipelines connecting multimodal foundation models to customer-facing interfaces.",
+        "Established evaluation metrics and feedback loops to ensure trustworthy AGI-powered experiences.",
       ],
     },
   ];
 
   // Additional experiences to show when "Load More" is clicked
   const additionalExperiences = [
+    {
+      title: "Founder & CEO",
+      company: "Linkeen · United States (On-site)",
+      period: "July 2023 - December 2024",
+      achievements: [
+        "Launched an AI code review platform (Evolua.io) that cut review cycles by 40% while improving quality and security.",
+        "Architected a high-performance Next.js application using the App Router, Server Components, and image optimization to deliver 90% faster page loads.",
+        "Implemented advanced data fetching with ISR, route prefetching, and dynamic imports to achieve sub-200ms Time to Interactive.",
+        "Optimized Core Web Vitals and PWA capabilities to elevate user experience across devices.",
+        "Scaled microservice architectures on AWS leveraging AppSync, Lambda, EventBridge, Cognito, Redis, and DynamoDB.",
+        "Delivered serverless applications handling millions of requests per second with AWS Lambda, AppSync, GraphQL, EventBridge, and DynamoDB.",
+        "Developed custom RAG solutions using Pinecone and Supabase PostgreSQL/pgvector.",
+        "Built AI agents with LangChain, LangGraph, and Python backed by Pinecone similarity search.",
+      ],
+    },
     {
       title: "Senior Software Engineer",
       company: "Edvisor.io",
