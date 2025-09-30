@@ -1,24 +1,46 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
+
+type JobCompany = {
+  name: string;
+  url?: string;
+  location?: string;
+};
+
+type Experience = {
+  title: string;
+  company: JobCompany;
+  period: string;
+  achievements: string[];
+};
 
 function ExperienceSection() {
   const [showAllExperiences, setShowAllExperiences] = useState(false);
 
   // Initial experiences (most recent 3)
-  const initialExperiences = [
+  const initialExperiences: Experience[] = [
     {
       title: "Founding Engineer",
-      company: "Stealth AI Startup · Palo Alto, CA (On-site)",
+      company: {
+        name: "AI Growth Labs",
+        url: "https://aigrowthlabs.com/",
+        location: "Palo Alto, CA · On-site",
+      },
       period: "July 2025 - Present",
       achievements: [
         "Building the core platform for a new AI-native product alongside the founding team.",
-        "Leading architecture decisions across agent workflows, data infrastructure, and deployment."
+        "Leading architecture decisions across agent workflows, data infrastructure, and deployment.",
       ],
     },
     {
       title: "Founder & CEO",
-      company: "Evolua · San Francisco Bay Area (On-site)",
+      company: {
+        name: "Evolua",
+        url: "https://evolua.io/",
+        location: "San Francisco Bay Area · On-site",
+      },
       period: "December 2024 - Present",
       achievements: [
         "Building Evolua, an AI-driven code review platform that helps teams ship faster and safer.",
@@ -28,7 +50,11 @@ function ExperienceSection() {
     },
     {
       title: "AI Founding Engineer",
-      company: "AGI Inc. · San Francisco Bay Area (On-site)",
+      company: {
+        name: "AGI Inc.",
+        url: "https://agi.tech/",
+        location: "San Francisco Bay Area · On-site",
+      },
       period: "January 2025 - July 2025",
       achievements: [
         "Prototyped applied AI experiences that reimagined human-AI interaction for everyday workflows.",
@@ -39,10 +65,14 @@ function ExperienceSection() {
   ];
 
   // Additional experiences to show when "Load More" is clicked
-  const additionalExperiences = [
+  const additionalExperiences: Experience[] = [
     {
       title: "Founder & CEO",
-      company: "Linkeen · United States (On-site)",
+      company: {
+        name: "Linkeen",
+        url: "https://linkeen.com/",
+        location: "United States · On-site",
+      },
       period: "July 2023 - December 2024",
       achievements: [
         "Launched an AI code review platform (Evolua.io) that cut review cycles by 40% while improving quality and security.",
@@ -56,8 +86,11 @@ function ExperienceSection() {
       ],
     },
     {
-      title: "Senior Software Engineer",
-      company: "Edvisor.io",
+      title: "Sr. Software Engineer",
+      company: {
+        name: "Edvisor.io",
+        url: "https://edvisor.io/",
+      },
       period: "March 2016 - December 2018",
       achievements: [
         "Developed and maintained web applications using Javascript/Typescript, Node.js, Angular.js, ORM, Relational and documented-oriented database (MySQL).",
@@ -69,8 +102,11 @@ function ExperienceSection() {
       ],
     },
     {
-      title: "Frontend Developer",
-      company: "Integritas Solutions Inc.",
+      title: "Sr. FullStack Engineer",
+      company: {
+        name: "Tailwind",
+        url: "https://tailwindsw.com/",
+      },
       period: "May 2014 - March 2016",
       achievements: [
         "Developed new features and fixed issues in several web and mobile applications using JavaScript, TypeScript, and Node.js.",
@@ -84,7 +120,10 @@ function ExperienceSection() {
     },
     {
       title: "Software Engineer",
-      company: "People Ingles & Educacao Tecnologica",
+      company: {
+        name: "People Ingles & Educacao Tecnologica",
+        url: "https://www.people.com.br/",
+      },
       period: "November 2010 - April 2014",
       achievements: [
         "Implemented web and API solutions using JavaScript, TypeScript, and Node.js.",
@@ -96,7 +135,9 @@ function ExperienceSection() {
     },
     {
       title: "Software Engineer",
-      company: "Condumig",
+      company: {
+        name: "Condumig",
+      },
       period: "April 2009 - September 2010",
       achievements: [
         "Implemented the company's first web solution allowing external employees to request quotes and submit orders.",
@@ -389,18 +430,27 @@ function JobCard({
   company,
   period,
   achievements,
-}: {
-  title: string;
-  company: string;
-  period: string;
-  achievements: string[];
-}) {
+}: Experience) {
   return (
     <div className="rounded-2xl bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-md sm:p-8">
       <div className="flex flex-col border-b border-slate-100 pb-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h3 className="text-xl font-bold text-slate-900">{title}</h3>
-          <p className="text-lg text-blue-600">{company}</p>
+          {company.url ? (
+            <Link
+              href={company.url}
+              className="text-lg text-blue-600 hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {company.name}
+            </Link>
+          ) : (
+            <p className="text-lg text-blue-600">{company.name}</p>
+          )}
+          {company.location && (
+            <p className="text-sm text-slate-600">{company.location}</p>
+          )}
         </div>
         <div className="mt-2 rounded-full bg-slate-100 px-4 py-1 text-sm font-medium text-slate-700 sm:mt-0">
           {period}
