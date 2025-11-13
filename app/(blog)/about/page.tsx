@@ -50,7 +50,7 @@ export default function AboutPage() {
                 </svg>
               </a>
               <a
-                href="https://linkedin.com/in/samuelcasilva"
+                href="https://linkedin.com/in/samsillva"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-white transition-transform hover:scale-110"
