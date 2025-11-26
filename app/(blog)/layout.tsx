@@ -104,7 +104,7 @@ async function Footer() {
               </a>
 
               <a
-                href="https://linkedin.com/in/samuelcasilva"
+                href="https://linkedin.com/in/samsillva"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center rounded-full bg-slate-100 px-4 py-2 text-slate-700 transition-colors hover:bg-slate-200"
@@ -122,7 +122,7 @@ async function Footer() {
               </a>
 
               <a
-                href="https://x.com/samuelcasilva"
+                href="https://x.com/samsillva"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center rounded-full bg-slate-100 px-4 py-2 text-slate-700 transition-colors hover:bg-slate-200"
